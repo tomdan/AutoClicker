@@ -39,6 +39,12 @@ namespace AutoClicker
         {
             // write the current cursor position to the label
             cursor_coordinates_label.Text = "Współrzędne kursora: " + MousePosition.X.ToString() + " , " + MousePosition.Y.ToString();
+
+            // click Q key to turn off auto clicker timer 
+            if (GetAsyncKeyState(81))
+            {
+                auto_clicker_timer.Enabled = false;
+            }
         }
 
         private void start_button_Click(object sender, EventArgs e)
