@@ -12,6 +12,18 @@ namespace AutoClicker
 {
     public partial class AutoClickerForm : Form
     {
+        //to using keyboard without form focus
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern bool GetAsyncKeyState(int vKey);
+
+        //to using mouse cursor
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern bool SetCursorPos(int x, int y);
+
+        //to using mouse click
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        static extern void mouse_event(int dwFlags, int dx, int dy, int cButtons, int dwExtraInfo);
+        
         public AutoClickerForm()
         {
             InitializeComponent();
