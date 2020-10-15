@@ -16,5 +16,16 @@ namespace AutoClicker
         {
             InitializeComponent();
         }
+
+        private void cursor_coordinates_timer_Tick(object sender, EventArgs e)
+        {
+            // write the current cursor position to the label
+            cursor_coordinates_label.Text = "Współrzędne kursora: " + MousePosition.X.ToString() + " , " + MousePosition.Y.ToString();
+        }
+
+        private void start_button_Click(object sender, EventArgs e)
+        {
+            cursor_coordinates_timer.Enabled = true;
+        }
     }
 }
