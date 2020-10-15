@@ -43,7 +43,12 @@ namespace AutoClicker
 
         private void start_button_Click(object sender, EventArgs e)
         {
-            cursor_coordinates_timer.Enabled = true;
+            auto_clicker_timer.Enabled = true;
+        }
+
+        private void auto_clicker_timer_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -32,6 +32,7 @@
             this.start_button = new System.Windows.Forms.Button();
             this.cursor_coordinates_timer = new System.Windows.Forms.Timer(this.components);
             this.cursor_coordinates_label = new System.Windows.Forms.Label();
+            this.auto_clicker_timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // start_button
@@ -46,6 +47,7 @@
             // 
             // cursor_coordinates_timer
             // 
+            this.cursor_coordinates_timer.Enabled = true;
             this.cursor_coordinates_timer.Interval = 10;
             this.cursor_coordinates_timer.Tick += new System.EventHandler(this.cursor_coordinates_timer_Tick);
             // 
@@ -57,6 +59,11 @@
             this.cursor_coordinates_label.Size = new System.Drawing.Size(174, 19);
             this.cursor_coordinates_label.TabIndex = 1;
             this.cursor_coordinates_label.Text = "Współrzędne kursora: 0 , 0";
+            // 
+            // auto_clicker_timer
+            // 
+            this.auto_clicker_timer.Interval = 500;
+            this.auto_clicker_timer.Tick += new System.EventHandler(this.auto_clicker_timer_Tick);
             // 
             // AutoClickerForm
             // 
@@ -81,6 +88,7 @@
         private System.Windows.Forms.Button start_button;
         private System.Windows.Forms.Timer cursor_coordinates_timer;
         private System.Windows.Forms.Label cursor_coordinates_label;
+        private System.Windows.Forms.Timer auto_clicker_timer;
     }
 }
 
