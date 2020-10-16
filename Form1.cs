@@ -30,6 +30,10 @@ namespace AutoClicker
         public const int MOUSEEVENTF_RIGHTDOWN = 0x08;
         public const int MOUSEEVENTF_RIGHTUP = 0x10;
 
+        // to-click points list
+        List<Point> cursor_coordinates_to_click = new List<Point>();
+        int current_point_to_click = 0;
+
         public AutoClickerForm()
         {
             InitializeComponent();
@@ -44,6 +48,13 @@ namespace AutoClicker
             if (GetAsyncKeyState(81))
             {
                 auto_clicker_timer.Enabled = false;
+            }
+
+            // click key 1 to add new point to the list
+            if (GetAsyncKeyState(49))
+            {
+                // add new point to the list
+                cursor_coordinates_to_click.Add(new Point(MousePosition.X, MousePosition.Y));
             }
         }
 
