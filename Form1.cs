@@ -88,5 +88,14 @@ namespace AutoClicker
                 current_point_to_click++;
             }
         }
+
+        private void clear_button_Click(object sender, EventArgs e)
+        {
+            // clear list of points to clicked
+            cursor_coordinates_to_click.Clear();
+
+            // clear listBox
+            points_to_click_listBox.Items.Clear();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.cursor_coordinates_label = new System.Windows.Forms.Label();
             this.auto_clicker_timer = new System.Windows.Forms.Timer(this.components);
             this.points_to_click_listBox = new System.Windows.Forms.ListBox();
+            this.clear_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // start_button
@@ -75,11 +76,23 @@
             this.points_to_click_listBox.Size = new System.Drawing.Size(120, 194);
             this.points_to_click_listBox.TabIndex = 2;
             // 
+            // clear_button
+            // 
+            this.clear_button.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.clear_button.Location = new System.Drawing.Point(93, 12);
+            this.clear_button.Name = "clear_button";
+            this.clear_button.Size = new System.Drawing.Size(75, 23);
+            this.clear_button.TabIndex = 3;
+            this.clear_button.Text = "Wyczyść";
+            this.clear_button.UseVisualStyleBackColor = true;
+            this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
+            // 
             // AutoClickerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.clear_button);
             this.Controls.Add(this.points_to_click_listBox);
             this.Controls.Add(this.cursor_coordinates_label);
             this.Controls.Add(this.start_button);
@@ -101,6 +114,7 @@
         private System.Windows.Forms.Label cursor_coordinates_label;
         private System.Windows.Forms.Timer auto_clicker_timer;
         private System.Windows.Forms.ListBox points_to_click_listBox;
+        private System.Windows.Forms.Button clear_button;
     }
 }
 
