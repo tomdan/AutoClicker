@@ -65,7 +65,18 @@ namespace AutoClicker
 
         private void auto_clicker_timer_Tick(object sender, EventArgs e)
         {
+            if (current_point_to_click < cursor_coordinates_to_click.Count() )
+            {
+                // set the cursor on the next point of the list
+                SetCursorPos(cursor_coordinates_to_click[current_point_to_click].X, cursor_coordinates_to_click[current_point_to_click].Y);
 
+                // left click of the mouse
+                mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, 0);
+                mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, 0);
+
+                // go to the next point of the list
+                current_point_to_click++;
+            }
         }
     }
 }
