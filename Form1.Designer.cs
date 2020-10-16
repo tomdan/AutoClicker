@@ -48,7 +48,7 @@
             // cursor_coordinates_timer
             // 
             this.cursor_coordinates_timer.Enabled = true;
-            this.cursor_coordinates_timer.Interval = 10;
+            this.cursor_coordinates_timer.Interval = 200;
             this.cursor_coordinates_timer.Tick += new System.EventHandler(this.cursor_coordinates_timer_Tick);
             // 
             // cursor_coordinates_label
@@ -62,7 +62,7 @@
             // 
             // auto_clicker_timer
             // 
-            this.auto_clicker_timer.Interval = 500;
+            this.auto_clicker_timer.Interval = 1000;
             this.auto_clicker_timer.Tick += new System.EventHandler(this.auto_clicker_timer_Tick);
             // 
             // AutoClickerForm
@@ -73,7 +73,7 @@
             this.Controls.Add(this.cursor_coordinates_label);
             this.Controls.Add(this.start_button);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AutoClickerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Clicker";
