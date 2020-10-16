@@ -33,6 +33,7 @@
             this.cursor_coordinates_timer = new System.Windows.Forms.Timer(this.components);
             this.cursor_coordinates_label = new System.Windows.Forms.Label();
             this.auto_clicker_timer = new System.Windows.Forms.Timer(this.components);
+            this.points_to_click_listBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // start_button
@@ -65,11 +66,21 @@
             this.auto_clicker_timer.Interval = 1000;
             this.auto_clicker_timer.Tick += new System.EventHandler(this.auto_clicker_timer_Tick);
             // 
+            // points_to_click_listBox
+            // 
+            this.points_to_click_listBox.FormattingEnabled = true;
+            this.points_to_click_listBox.ItemHeight = 19;
+            this.points_to_click_listBox.Location = new System.Drawing.Point(12, 60);
+            this.points_to_click_listBox.Name = "points_to_click_listBox";
+            this.points_to_click_listBox.Size = new System.Drawing.Size(120, 194);
+            this.points_to_click_listBox.TabIndex = 2;
+            // 
             // AutoClickerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.points_to_click_listBox);
             this.Controls.Add(this.cursor_coordinates_label);
             this.Controls.Add(this.start_button);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -89,6 +100,7 @@
         private System.Windows.Forms.Timer cursor_coordinates_timer;
         private System.Windows.Forms.Label cursor_coordinates_label;
         private System.Windows.Forms.Timer auto_clicker_timer;
+        private System.Windows.Forms.ListBox points_to_click_listBox;
     }
 }
 

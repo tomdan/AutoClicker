@@ -55,6 +55,16 @@ namespace AutoClicker
             {
                 // add new point to the list
                 cursor_coordinates_to_click.Add(new Point(MousePosition.X, MousePosition.Y));
+
+                //add new point to the listBox
+                points_to_click_listBox.Items.Add(cursor_coordinates_to_click[cursor_coordinates_to_click.Count-1]);
+            }
+
+            // click key 5 to reset the list
+            if (GetAsyncKeyState(53))
+            {
+                // go to first point on the list
+                current_point_to_click = 0;
             }
         }
 
