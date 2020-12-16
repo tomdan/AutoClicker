@@ -36,7 +36,7 @@
             this.points_to_click_listBox = new System.Windows.Forms.ListBox();
             this.clear_button = new System.Windows.Forms.Button();
             this.panel_top = new System.Windows.Forms.Panel();
-            this.button_minimize = new System.Windows.Forms.Button();
+            this.minimize_button = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.timer_of_keys_actions = new System.Windows.Forms.Timer(this.components);
@@ -110,7 +110,7 @@
             // panel_top
             // 
             this.panel_top.BackColor = System.Drawing.Color.DimGray;
-            this.panel_top.Controls.Add(this.button_minimize);
+            this.panel_top.Controls.Add(this.minimize_button);
             this.panel_top.Controls.Add(this.button_exit);
             this.panel_top.Controls.Add(this.start_button);
             this.panel_top.Controls.Add(this.clear_button);
@@ -121,21 +121,21 @@
             this.panel_top.Size = new System.Drawing.Size(380, 40);
             this.panel_top.TabIndex = 4;
             // 
-            // button_minimize
+            // minimize_button
             // 
-            this.button_minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button_minimize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_minimize.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_minimize.ForeColor = System.Drawing.Color.Orange;
-            this.button_minimize.Location = new System.Drawing.Point(300, 0);
-            this.button_minimize.Margin = new System.Windows.Forms.Padding(1);
-            this.button_minimize.Name = "button_minimize";
-            this.button_minimize.Size = new System.Drawing.Size(40, 40);
-            this.button_minimize.TabIndex = 3;
-            this.button_minimize.Text = "---";
-            this.button_minimize.UseVisualStyleBackColor = false;
-            this.button_minimize.Click += new System.EventHandler(this.button_minimize_Click);
+            this.minimize_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.minimize_button.Dock = System.Windows.Forms.DockStyle.Right;
+            this.minimize_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimize_button.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.minimize_button.ForeColor = System.Drawing.Color.Orange;
+            this.minimize_button.Location = new System.Drawing.Point(300, 0);
+            this.minimize_button.Margin = new System.Windows.Forms.Padding(1);
+            this.minimize_button.Name = "minimize_button";
+            this.minimize_button.Size = new System.Drawing.Size(40, 40);
+            this.minimize_button.TabIndex = 3;
+            this.minimize_button.Text = "---";
+            this.minimize_button.UseVisualStyleBackColor = false;
+            this.minimize_button.Click += new System.EventHandler(this.minimize_button_Click);
             // 
             // button_exit
             // 
@@ -206,7 +206,7 @@
         private System.Windows.Forms.ListBox points_to_click_listBox;
         private System.Windows.Forms.Button clear_button;
         private System.Windows.Forms.Panel panel_top;
-        private System.Windows.Forms.Button button_minimize;
+        private System.Windows.Forms.Button minimize_button;
         private System.Windows.Forms.Button button_exit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer_of_keys_actions;
