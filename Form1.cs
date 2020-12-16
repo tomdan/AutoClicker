@@ -42,8 +42,11 @@ namespace AutoClicker
         private void cursor_coordinates_timer_Tick(object sender, EventArgs e)
         {
             // write the current cursor position to the label
-            cursor_coordinates_label.Text = "Współrzędne kursora: " + MousePosition.X.ToString() + " , " + MousePosition.Y.ToString();
+            cursor_coordinates_label.Text = "Współrzędne kursora: " + MousePosition.X.ToString() + " , " + MousePosition.Y.ToString(); 
+        }
 
+        private void timer_of_keys_actions_Tick(object sender, EventArgs e)
+        {
             // click Q key to turn off auto clicker timer 
             if (GetAsyncKeyState(81))
             {
@@ -57,25 +60,29 @@ namespace AutoClicker
                 cursor_coordinates_to_click.Add(new Point(MousePosition.X, MousePosition.Y));
 
                 //add new point to the listBox
-                points_to_click_listBox.Items.Add(cursor_coordinates_to_click[cursor_coordinates_to_click.Count-1]);
+                points_to_click_listBox.Items.Add(cursor_coordinates_to_click[cursor_coordinates_to_click.Count - 1]);
             }
 
-            // click key 5 to reset the list
-            if (GetAsyncKeyState(53))
+            // click key 2 to start the list from the beginning
+            if (GetAsyncKeyState(50))
             {
                 // go to first point on the list
                 current_point_to_click = 0;
             }
-        }
 
-        private void start_button_Click(object sender, EventArgs e)
-        {
-            auto_clicker_timer.Enabled = true;
-        }
+            // click key 4 to clear auto clickera11122124
+            if (GetAsyncKeyState(52))
+            {
+                // clear list of points to clicked
+                cursor_coordinates_to_click.Clear();
 
+                // clear listBox
+                points_to_click_listBox.Items.Clear();
+            }
+        }
         private void auto_clicker_timer_Tick(object sender, EventArgs e)
         {
-            if (current_point_to_click < cursor_coordinates_to_click.Count() )
+            if (current_point_to_click < cursor_coordinates_to_click.Count())
             {
                 // set the cursor on the next point of the list
                 SetCursorPos(cursor_coordinates_to_click[current_point_to_click].X, cursor_coordinates_to_click[current_point_to_click].Y);
@@ -89,6 +96,11 @@ namespace AutoClicker
             }
         }
 
+        private void start_button_Click(object sender, EventArgs e)
+        {
+            auto_clicker_timer.Enabled = true;
+        }
+
         private void clear_button_Click(object sender, EventArgs e)
         {
             // clear list of points to clicked
@@ -98,7 +110,7 @@ namespace AutoClicker
             points_to_click_listBox.Items.Clear();
         }
 
-        private void button_minimize_Click(object sender, EventArgs e)
+        private void minimize_button_Click(object sender, EventArgs e)
         {
             // minimize AutoClickerForm
             this.WindowState = FormWindowState.Minimized;
