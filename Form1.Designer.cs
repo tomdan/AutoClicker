@@ -39,6 +39,7 @@
             this.button_minimize = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer_of_keys_actions = new System.Windows.Forms.Timer(this.components);
             this.panel_top.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,6 +167,12 @@
     "nkt do listy kliknięć\r\n-- 2 - powtarza kliknięcia od początku\r\n-- 4 - zeruje lis" +
     "te punktów do klikania\r\n";
             // 
+            // timer_of_keys_actions
+            // 
+            this.timer_of_keys_actions.Enabled = true;
+            this.timer_of_keys_actions.Interval = 200;
+            this.timer_of_keys_actions.Tick += new System.EventHandler(this.timer_of_keys_actions_Tick);
+            // 
             // AutoClickerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -202,6 +209,7 @@
         private System.Windows.Forms.Button button_minimize;
         private System.Windows.Forms.Button button_exit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer timer_of_keys_actions;
     }
 }
 

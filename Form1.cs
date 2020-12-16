@@ -42,8 +42,11 @@ namespace AutoClicker
         private void cursor_coordinates_timer_Tick(object sender, EventArgs e)
         {
             // write the current cursor position to the label
-            cursor_coordinates_label.Text = "Współrzędne kursora: " + MousePosition.X.ToString() + " , " + MousePosition.Y.ToString();
+            cursor_coordinates_label.Text = "Współrzędne kursora: " + MousePosition.X.ToString() + " , " + MousePosition.Y.ToString(); 
+        }
 
+        private void timer_of_keys_actions_Tick(object sender, EventArgs e)
+        {
             // click Q key to turn off auto clicker timer 
             if (GetAsyncKeyState(81))
             {
@@ -57,7 +60,7 @@ namespace AutoClicker
                 cursor_coordinates_to_click.Add(new Point(MousePosition.X, MousePosition.Y));
 
                 //add new point to the listBox
-                points_to_click_listBox.Items.Add(cursor_coordinates_to_click[cursor_coordinates_to_click.Count-1]);
+                points_to_click_listBox.Items.Add(cursor_coordinates_to_click[cursor_coordinates_to_click.Count - 1]);
             }
 
             // click key 2 to start the list from the beginning
@@ -67,7 +70,7 @@ namespace AutoClicker
                 current_point_to_click = 0;
             }
 
-            // click key 4 to clear auto clicker
+            // click key 4 to clear auto clickera11122124
             if (GetAsyncKeyState(52))
             {
                 // clear list of points to clicked
