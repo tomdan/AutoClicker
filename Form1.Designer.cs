@@ -36,8 +36,8 @@
             this.points_to_click_listBox = new System.Windows.Forms.ListBox();
             this.clear_button = new System.Windows.Forms.Button();
             this.panel_top = new System.Windows.Forms.Panel();
-            this.button_minimize = new System.Windows.Forms.Button();
             this.button_exit = new System.Windows.Forms.Button();
+            this.button_minimize = new System.Windows.Forms.Button();
             this.panel_top.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,9 +62,12 @@
             // cursor_coordinates_label
             // 
             this.cursor_coordinates_label.AutoSize = true;
-            this.cursor_coordinates_label.Location = new System.Drawing.Point(35, 255);
+            this.cursor_coordinates_label.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.cursor_coordinates_label.ForeColor = System.Drawing.Color.Ivory;
+            this.cursor_coordinates_label.Location = new System.Drawing.Point(7, 46);
+            this.cursor_coordinates_label.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.cursor_coordinates_label.Name = "cursor_coordinates_label";
-            this.cursor_coordinates_label.Size = new System.Drawing.Size(181, 19);
+            this.cursor_coordinates_label.Size = new System.Drawing.Size(268, 18);
             this.cursor_coordinates_label.TabIndex = 1;
             this.cursor_coordinates_label.Text = "Współrzędne kursora: 0 , 0";
             // 
@@ -75,13 +78,15 @@
             // 
             // points_to_click_listBox
             // 
+            this.points_to_click_listBox.BackColor = System.Drawing.Color.DarkSlateGray;
             this.points_to_click_listBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.points_to_click_listBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.points_to_click_listBox.ForeColor = System.Drawing.Color.White;
             this.points_to_click_listBox.FormattingEnabled = true;
             this.points_to_click_listBox.ItemHeight = 19;
             this.points_to_click_listBox.Location = new System.Drawing.Point(657, 0);
             this.points_to_click_listBox.Name = "points_to_click_listBox";
-            this.points_to_click_listBox.ScrollAlwaysVisible = true;
+            this.points_to_click_listBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.points_to_click_listBox.Size = new System.Drawing.Size(100, 461);
             this.points_to_click_listBox.TabIndex = 2;
             // 
@@ -100,6 +105,7 @@
             // 
             // panel_top
             // 
+            this.panel_top.BackColor = System.Drawing.Color.DimGray;
             this.panel_top.Controls.Add(this.button_exit);
             this.panel_top.Controls.Add(this.button_minimize);
             this.panel_top.Controls.Add(this.start_button);
@@ -110,21 +116,6 @@
             this.panel_top.Name = "panel_top";
             this.panel_top.Size = new System.Drawing.Size(657, 40);
             this.panel_top.TabIndex = 4;
-            // 
-            // button_minimize
-            // 
-            this.button_minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_minimize.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_minimize.ForeColor = System.Drawing.Color.Orange;
-            this.button_minimize.Location = new System.Drawing.Point(575, 0);
-            this.button_minimize.Margin = new System.Windows.Forms.Padding(1);
-            this.button_minimize.Name = "button_minimize";
-            this.button_minimize.Size = new System.Drawing.Size(40, 40);
-            this.button_minimize.TabIndex = 4;
-            this.button_minimize.Text = "---";
-            this.button_minimize.UseVisualStyleBackColor = false;
-            this.button_minimize.Click += new System.EventHandler(this.button_minimize_Click);
             // 
             // button_exit
             // 
@@ -140,6 +131,21 @@
             this.button_exit.Text = "X";
             this.button_exit.UseVisualStyleBackColor = false;
             this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            // 
+            // button_minimize
+            // 
+            this.button_minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_minimize.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_minimize.ForeColor = System.Drawing.Color.Orange;
+            this.button_minimize.Location = new System.Drawing.Point(575, 0);
+            this.button_minimize.Margin = new System.Windows.Forms.Padding(1);
+            this.button_minimize.Name = "button_minimize";
+            this.button_minimize.Size = new System.Drawing.Size(40, 40);
+            this.button_minimize.TabIndex = 4;
+            this.button_minimize.Text = "---";
+            this.button_minimize.UseVisualStyleBackColor = false;
+            this.button_minimize.Click += new System.EventHandler(this.button_minimize_Click);
             // 
             // AutoClickerForm
             // 
