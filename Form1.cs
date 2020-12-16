@@ -60,8 +60,8 @@ namespace AutoClicker
                 points_to_click_listBox.Items.Add(cursor_coordinates_to_click[cursor_coordinates_to_click.Count-1]);
             }
 
-            // click key 5 to reset the list
-            if (GetAsyncKeyState(53))
+            // click key 2 to start the list from the beginning
+            if (GetAsyncKeyState(50))
             {
                 // go to first point on the list
                 current_point_to_click = 0;
