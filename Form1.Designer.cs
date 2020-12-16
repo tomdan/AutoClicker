@@ -57,7 +57,7 @@
             // cursor_coordinates_timer
             // 
             this.cursor_coordinates_timer.Enabled = true;
-            this.cursor_coordinates_timer.Interval = 200;
+            this.cursor_coordinates_timer.Interval = 50;
             this.cursor_coordinates_timer.Tick += new System.EventHandler(this.cursor_coordinates_timer_Tick);
             // 
             // cursor_coordinates_label
