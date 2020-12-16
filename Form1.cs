@@ -66,6 +66,16 @@ namespace AutoClicker
                 // go to first point on the list
                 current_point_to_click = 0;
             }
+
+            // click key 4 to clear auto clicker
+            if (GetAsyncKeyState(52))
+            {
+                // clear list of points to clicked
+                cursor_coordinates_to_click.Clear();
+
+                // clear listBox
+                points_to_click_listBox.Items.Clear();
+            }
         }
 
         private void start_button_Click(object sender, EventArgs e)
