@@ -97,5 +97,15 @@ namespace AutoClicker
             // clear listBox
             points_to_click_listBox.Items.Clear();
         }
+
+        private void button_minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
