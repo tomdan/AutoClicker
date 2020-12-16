@@ -100,6 +100,7 @@ namespace AutoClicker
 
         private void button_minimize_Click(object sender, EventArgs e)
         {
+            // minimize AutoClickerForm
             this.WindowState = FormWindowState.Minimized;
         }
 

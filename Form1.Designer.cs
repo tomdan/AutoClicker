@@ -36,8 +36,9 @@
             this.points_to_click_listBox = new System.Windows.Forms.ListBox();
             this.clear_button = new System.Windows.Forms.Button();
             this.panel_top = new System.Windows.Forms.Panel();
-            this.button_exit = new System.Windows.Forms.Button();
             this.button_minimize = new System.Windows.Forms.Button();
+            this.button_exit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel_top.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             this.cursor_coordinates_label.AutoSize = true;
             this.cursor_coordinates_label.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.cursor_coordinates_label.ForeColor = System.Drawing.Color.Ivory;
+            this.cursor_coordinates_label.ForeColor = System.Drawing.Color.Gold;
             this.cursor_coordinates_label.Location = new System.Drawing.Point(7, 46);
             this.cursor_coordinates_label.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.cursor_coordinates_label.Name = "cursor_coordinates_label";
@@ -84,11 +85,13 @@
             this.points_to_click_listBox.ForeColor = System.Drawing.Color.White;
             this.points_to_click_listBox.FormattingEnabled = true;
             this.points_to_click_listBox.ItemHeight = 19;
-            this.points_to_click_listBox.Location = new System.Drawing.Point(657, 0);
+            this.points_to_click_listBox.Location = new System.Drawing.Point(380, 0);
+            this.points_to_click_listBox.Margin = new System.Windows.Forms.Padding(0);
             this.points_to_click_listBox.Name = "points_to_click_listBox";
             this.points_to_click_listBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.points_to_click_listBox.Size = new System.Drawing.Size(100, 461);
-            this.points_to_click_listBox.TabIndex = 2;
+            this.points_to_click_listBox.Size = new System.Drawing.Size(100, 228);
+            this.points_to_click_listBox.TabIndex = 20;
+            this.points_to_click_listBox.TabStop = false;
             // 
             // clear_button
             // 
@@ -98,7 +101,7 @@
             this.clear_button.Location = new System.Drawing.Point(86, 0);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(80, 40);
-            this.clear_button.TabIndex = 3;
+            this.clear_button.TabIndex = 1;
             this.clear_button.Text = "Wyczyść";
             this.clear_button.UseVisualStyleBackColor = false;
             this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
@@ -106,52 +109,69 @@
             // panel_top
             // 
             this.panel_top.BackColor = System.Drawing.Color.DimGray;
-            this.panel_top.Controls.Add(this.button_exit);
             this.panel_top.Controls.Add(this.button_minimize);
+            this.panel_top.Controls.Add(this.button_exit);
             this.panel_top.Controls.Add(this.start_button);
             this.panel_top.Controls.Add(this.clear_button);
             this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_top.Location = new System.Drawing.Point(0, 0);
             this.panel_top.Margin = new System.Windows.Forms.Padding(0);
             this.panel_top.Name = "panel_top";
-            this.panel_top.Size = new System.Drawing.Size(657, 40);
+            this.panel_top.Size = new System.Drawing.Size(380, 40);
             this.panel_top.TabIndex = 4;
-            // 
-            // button_exit
-            // 
-            this.button_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_exit.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button_exit.ForeColor = System.Drawing.Color.Red;
-            this.button_exit.Location = new System.Drawing.Point(617, 0);
-            this.button_exit.Margin = new System.Windows.Forms.Padding(1);
-            this.button_exit.Name = "button_exit";
-            this.button_exit.Size = new System.Drawing.Size(40, 40);
-            this.button_exit.TabIndex = 5;
-            this.button_exit.Text = "X";
-            this.button_exit.UseVisualStyleBackColor = false;
-            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
             // 
             // button_minimize
             // 
             this.button_minimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button_minimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_minimize.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button_minimize.ForeColor = System.Drawing.Color.Orange;
-            this.button_minimize.Location = new System.Drawing.Point(575, 0);
+            this.button_minimize.Location = new System.Drawing.Point(300, 0);
             this.button_minimize.Margin = new System.Windows.Forms.Padding(1);
             this.button_minimize.Name = "button_minimize";
             this.button_minimize.Size = new System.Drawing.Size(40, 40);
-            this.button_minimize.TabIndex = 4;
+            this.button_minimize.TabIndex = 3;
             this.button_minimize.Text = "---";
             this.button_minimize.UseVisualStyleBackColor = false;
             this.button_minimize.Click += new System.EventHandler(this.button_minimize_Click);
+            // 
+            // button_exit
+            // 
+            this.button_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_exit.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button_exit.ForeColor = System.Drawing.Color.Red;
+            this.button_exit.Location = new System.Drawing.Point(340, 0);
+            this.button_exit.Margin = new System.Windows.Forms.Padding(1);
+            this.button_exit.Name = "button_exit";
+            this.button_exit.Size = new System.Drawing.Size(40, 40);
+            this.button_exit.TabIndex = 4;
+            this.button_exit.Text = "X";
+            this.button_exit.UseVisualStyleBackColor = false;
+            this.button_exit.Click += new System.EventHandler(this.button_exit_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.Ivory;
+            this.label1.Location = new System.Drawing.Point(7, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(306, 105);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Sterowanie klawiszami:\r\n-- Q - zatrzymuje automatyczne klikanie\r\n-- 1 - dodaje pu" +
+    "nkt do listy kliknięć\r\n-- 2 - powtarza kliknięcia od początku\r\n-- 4 - zeruje lis" +
+    "te punktów do klikania\r\n";
             // 
             // AutoClickerForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(757, 461);
+            this.ClientSize = new System.Drawing.Size(480, 228);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel_top);
             this.Controls.Add(this.points_to_click_listBox);
             this.Controls.Add(this.cursor_coordinates_label);
@@ -181,6 +201,7 @@
         private System.Windows.Forms.Panel panel_top;
         private System.Windows.Forms.Button button_minimize;
         private System.Windows.Forms.Button button_exit;
+        private System.Windows.Forms.Label label1;
     }
 }
 
