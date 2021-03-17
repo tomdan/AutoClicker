@@ -46,6 +46,7 @@
             // start_button
             // 
             this.start_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.start_button.Cursor = System.Windows.Forms.Cursors.Default;
             this.start_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.start_button.Location = new System.Drawing.Point(0, 0);
             this.start_button.Name = "start_button";
@@ -97,9 +98,10 @@
             // clear_button
             // 
             this.clear_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.clear_button.Cursor = System.Windows.Forms.Cursors.Default;
             this.clear_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.clear_button.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.clear_button.Location = new System.Drawing.Point(86, 0);
+            this.clear_button.Location = new System.Drawing.Point(79, 0);
             this.clear_button.Name = "clear_button";
             this.clear_button.Size = new System.Drawing.Size(80, 40);
             this.clear_button.TabIndex = 1;
@@ -114,16 +116,21 @@
             this.panel_top.Controls.Add(this.button_exit);
             this.panel_top.Controls.Add(this.start_button);
             this.panel_top.Controls.Add(this.clear_button);
+            this.panel_top.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.panel_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_top.Location = new System.Drawing.Point(0, 0);
             this.panel_top.Margin = new System.Windows.Forms.Padding(0);
             this.panel_top.Name = "panel_top";
             this.panel_top.Size = new System.Drawing.Size(380, 40);
             this.panel_top.TabIndex = 4;
+            this.panel_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseDown);
+            this.panel_top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseMove);
+            this.panel_top.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_top_MouseUp);
             // 
             // minimize_button
             // 
             this.minimize_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.minimize_button.Cursor = System.Windows.Forms.Cursors.Default;
             this.minimize_button.Dock = System.Windows.Forms.DockStyle.Right;
             this.minimize_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimize_button.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -140,6 +147,7 @@
             // button_exit
             // 
             this.button_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button_exit.Cursor = System.Windows.Forms.Cursors.Default;
             this.button_exit.Dock = System.Windows.Forms.DockStyle.Right;
             this.button_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_exit.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));

@@ -34,6 +34,10 @@ namespace AutoClicker
         List<Point> cursor_coordinates_to_click = new List<Point>();
         int current_point_to_click = 0;
 
+        // to change window position
+        private bool dragging = false;
+        private Point start_dragging_point = new Point(0, 0);
+
         public AutoClickerForm()
         {
             InitializeComponent();
@@ -119,6 +123,27 @@ namespace AutoClicker
         private void button_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel_top_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            start_dragging_point = new Point(e.X, e.Y);
+        }
+
+        private void panel_top_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void panel_top_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point P = PointToScreen(e.Location);
+                Location = new Point(P.X - start_dragging_point.X, P.Y - start_dragging_point.Y);
+            }
+            
         }
     }
 }
